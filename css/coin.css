@@ -298,13 +298,13 @@
 }
 
 .cyl-1 .tp {
-	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+	background: url(../media/heads.png);
 }
 
 .cyl-1 .bm {
-	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+	background: url(../media/tails.png);
 }
 
 .cyl-1 .side {
-	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+	background: url(../media/side.png);
 }
