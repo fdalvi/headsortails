@@ -1,0 +1,310 @@
+/* Obtained from tridiv, prefixed by http://prefixr.com/ */
+#tridiv {
+	perspective: 800px;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	font-size: 300%;
+}
+
+.face {
+	-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.scene,.shape,.face,.face-wrapper,.cr {
+	position: absolute;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.scene {
+	width: 80em;
+	height: 80em;
+	top: 50%;
+	left: 50%;
+	margin: -40em 0 0 -40em;
+}
+
+.shape {
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+
+	-webkit-transform-origin: 50%;
+	-moz-transform-origin: 50%;
+	-o-transform-origin: 50%;
+	-ms-transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+.face,.face-wrapper {
+	overflow: hidden;
+
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+	backface-visibility: hidden; /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+
+.face {
+	-webkit-background-size: 100% 100% !important;
+	-moz-background-size: 100% 100% !important;
+	background-size: 100% 100% !important;
+	background-position: center;
+}
+
+.face-wrapper .face {
+	left: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.photon-shader {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.side {
+	left: 50%;
+}
+
+.cr,.cr .side {
+	height: 100%;
+}
+
+[class*="cylinder"] .tp {
+	-webkit-transform: rotateX(90deg) translateY(-50%);
+	-moz-transform: rotateX(90deg) translateY(-50%);
+	-o-transform: rotateX(90deg) translateY(-50%);
+	-ms-transform: rotateX(90deg) translateY(-50%);
+	transform: rotateX(90deg) translateY(-50%);
+}
+
+[class*="cylinder"] .bm {
+	-webkit-transform: rotateX(-90deg) translateY(-50%);
+	-moz-transform: rotateX(-90deg) translateY(-50%);
+	-o-transform: rotateX(-90deg) translateY(-50%);
+	-ms-transform: rotateX(-90deg) translateY(-50%);
+	transform: rotateX(-90deg) translateY(-50%);
+}
+
+[class*="cylinder"] .tp,[class*="cylinder"] .bm,[class*="cylinder"] .tp .photon-shader,[class*="cylinder"] .bm .photon-shader {
+	border-radius: 50%;
+}
+
+[class*="cylinder"] .bm {
+	top: 100%;
+}
+
+/* .cyl-1 styles */
+.cyl-1 {
+	-webkit-transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	-moz-transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	-o-transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	-ms-transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	transform: translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 6em;
+	height: 0.3181818181818181em;
+	margin: -0.15909090909090906em 0 0 -3em;
+}
+
+.cyl-1 .tp,.cyl-1 .bm {
+	width: 6em;
+	height: 6em;
+}
+
+.cyl-1 .side {
+	width: 0.9753066419472177em;
+	height: 0.3181818181818181em;
+}
+
+.cyl-1 .s0 {
+	-webkit-transform: rotateY(9deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(9deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(9deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(9deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(9deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s1 {
+	-webkit-transform: rotateY(27deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(27deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(27deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(27deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(27deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s2 {
+	-webkit-transform: rotateY(45deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(45deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(45deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(45deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(45deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s3 {
+	-webkit-transform: rotateY(63deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(63deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(63deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(63deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(63deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s4 {
+	-webkit-transform: rotateY(81deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(81deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(81deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(81deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(81deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s5 {
+	-webkit-transform: rotateY(99deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(99deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(99deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(99deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(99deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s6 {
+	-webkit-transform: rotateY(117deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(117deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(117deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(117deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(117deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s7 {
+	-webkit-transform: rotateY(135deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(135deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(135deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(135deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(135deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s8 {
+	-webkit-transform: rotateY(153deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(153deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(153deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(153deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(153deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s9 {
+	-webkit-transform: rotateY(171deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(171deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(171deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(171deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(171deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s10 {
+	-webkit-transform: rotateY(189deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(189deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(189deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(189deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(189deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s11 {
+	-webkit-transform: rotateY(207deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(207deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(207deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(207deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(207deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s12 {
+	-webkit-transform: rotateY(225deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(225deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(225deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(225deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(225deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s13 {
+	-webkit-transform: rotateY(243deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(243deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(243deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(243deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(243deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s14 {
+	-webkit-transform: rotateY(261deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(261deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(261deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(261deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(261deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s15 {
+	-webkit-transform: rotateY(279deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(279deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(279deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(279deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(279deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s16 {
+	-webkit-transform: rotateY(297deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(297deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(297deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(297deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(297deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s17 {
+	-webkit-transform: rotateY(315deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(315deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(315deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(315deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(315deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s18 {
+	-webkit-transform: rotateY(333deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(333deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(333deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(333deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(333deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .s19 {
+	-webkit-transform: rotateY(351deg) translate3D(-50%, 0, 2.975em);
+	-moz-transform: rotateY(351deg) translate3D(-50%, 0, 2.975em);
+	-o-transform: rotateY(351deg) translate3D(-50%, 0, 2.975em);
+	-ms-transform: rotateY(351deg) translate3D(-50%, 0, 2.975em);
+	transform: rotateY(351deg) translate3D(-50%, 0, 2.975em);
+}
+
+.cyl-1 .face,.cyl-1 .side {
+	background-color: #FFFFFF;
+}
+
+.cyl-1 .tp {
+	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+}
+
+.cyl-1 .bm {
+	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+}
+
+.cyl-1 .side {
+	background: url(http://openclipart.org/image/300px/svg_to_png/11120/jetxee_euro_coin.png);
+}
