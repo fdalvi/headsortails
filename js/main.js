@@ -1,18 +1,44 @@
-
-var animationInProgress = false;
+var tossInProgress = false;
+var result = null;
 $(document).ready(function() {
-	$(document).keypress(function(e) {
-		console.log("Key pressed!");
 
-		if(!animationInProgress)
+	// Start initial animation
+	$("#coin").addClass('slowspin');
+
+	$(document).keypress(function(e) {
+		if(!tossInProgress)
 		{
-			animationInProgress = true;
-			$("#coin").toggleClass("spin");
-			$("#coin").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
-				function(e) {
-					animationInProgress = false;
-				});
+			// Remove old classes
+			$("#coin").removeClass("slowspin");
+			$("#coin").removeClass("headresult");
+			$("#coin").removeClass("tailresult");
+
+			// Do the virtual toss
+			var randomNumber = Math.floor((Math.random()*100)+1);
+			if(randomNumber % 2 == 0)
+				result = "heads";
+			else
+				result = "tails";
+
+			// Show the toss
+			if(result == "heads")
+				$("#coin").addClass("headspin");
+			else
+				$("#coin").addClass("tailspin");
+
+			$("#coin").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+				if(result == "heads")
+					$("#coin").addClass("headresult");
+				else
+					$("#coin").addClass("tailresult");
+
+				$("#coin").removeClass("headspin");
+				$("#coin").removeClass("tailspin");
+
+				result = null;
+				$("#coin").unbind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd");
+				tossInProgress = false;
+			});
 		}
-		
 	});
 });
